@@ -70,6 +70,7 @@ ENV APPSETTING_SENTIMENT_URI=https://westeurope.api.cognitive.microsoft.com
 ENTRYPOINT [ "python" ]
 CMD [ "app.py" ]
 ```
+
 What you can see from the Dockerfile is there are three environment variables needed for the Cognitive Services keys, and another four for URLs - the last ones with sensible defaults for the Azure West Europe region.
 
 Note the name of the environment variables are designed to work well with Azure App Service application settings.
@@ -88,7 +89,7 @@ docker run -it -e APPSETTING_TRANSLATE_KEY='keyone' \
 -e APPSETTING_SENTIMENT_KEY='keythree' \
 -p 5000:5000 \
 translatorapp
-``
+```
 
 3. Upload to ACR
 ```
@@ -96,6 +97,7 @@ az acr login myacr
 docker tag translatorapp myacr.azurecr.io/translatorapp
 docker push myacr.azurecr.io/translatorapp
 ```
+
 4. Provision a web app for containers in Azure
 Create the web app in the right region and make sure it is a Docker Container type. Then set its Docker settings to point to your docker image:
 
