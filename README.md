@@ -107,7 +107,7 @@ Then make sure that you configure your Cognitive services keys in Application se
 
 ![Application Settings](/web-app-settings.png)
 
-** Note ** The container running the flask applicatin exposes its web endpoint on port 5000, so you MUST set this in applications settings too:
+The container running the flask applicatin exposes its web endpoint on port 5000, so you MUST set this in applications settings too:
 
 5. Navigate to the URL provided and test your app.
 
