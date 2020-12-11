@@ -1,7 +1,7 @@
 import os, requests, uuid, json
 
 # Don't forget to replace with your Cog Services subscription key!
-subscription_key = 'YOUR_TEXT_ANALYTICS_SUBSCRIPTION_KEY'
+subscription_key = os.environ['APPSETTING_SENTIMENT_KEY']
 
 # Our Flask route will supply four arguments: input_text, input_language,
 # output_text, output_language.
@@ -10,7 +10,7 @@ subscription_key = 'YOUR_TEXT_ANALYTICS_SUBSCRIPTION_KEY'
 # in the request. See main.js for Ajax calls.
 
 def get_sentiment(input_text, input_language, output_text, output_language):
-    base_url = 'https://westus.api.cognitive.microsoft.com/text/analytics'
+    base_url = os.environ['APPSETTING_SENTIMENT_URI'] + '/text/analytics'
     path = '/v2.0/sentiment'
     constructed_url = base_url + path
 

@@ -35,3 +35,7 @@ def text_to_speech():
     tts.get_token()
     audio_response = tts.save_audio()
     return audio_response
+
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
