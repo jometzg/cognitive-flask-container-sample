@@ -1,4 +1,4 @@
-# Tutorial: Build a Flask app with Azure Cognitive Services
+# Deploy a containerised Flask app with Azure Cognitive Services onto Azure app services
 
 With this sample, you'll build a Flask web app that uses Azure Cognitive Services to translate text, analyze sentiment, and synthesize translated text into speech. If you run into any issues, let us know by submitting and issue.
 
