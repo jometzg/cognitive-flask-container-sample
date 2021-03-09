@@ -93,7 +93,7 @@ translatorapp
 
 3. Upload to ACR
 ```
-az acr login myacr
+az acr login -n myacr
 docker tag translatorapp myacr.azurecr.io/translatorapp
 docker push myacr.azurecr.io/translatorapp
 ```
