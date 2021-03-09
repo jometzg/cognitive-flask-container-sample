@@ -62,7 +62,7 @@ ENV APPSETTING_SPEECH_KEY=second
 ENV APPSETTING_SENTIMENT_KEY=third
 
 # regional URLs
-ENV APPSETTING_TRANSLATE_URI=https://api-eur.cognitive.microsofttranslator.com
+ENV APPSETTING_TRANSLATE_URI=https://api.cognitive.microsofttranslator.com
 ENV APPSETTING_TRANSLATE_REGION=westeurope
 ENV APPSETTING_SPEECH_URI=https://westeurope.api.cognitive.microsoft.com
 ENV APPSETTING_SENTIMENT_URI=https://westeurope.api.cognitive.microsoft.com
@@ -82,11 +82,11 @@ docker build -t translatorapp .
 ```
 
 2. Test locally
-This will require the setting of at least three of the environment variables.
+This will require the setting of at least three of the environment variables. These environment variables have been left unquoted. This may be different on different development environments (Windows versus Linux).
 ```
-docker run -it -e APPSETTING_TRANSLATE_KEY='keyone' \ 
--e APPSETTING_SPEECH_KEY='keytwo' \
--e APPSETTING_SENTIMENT_KEY='keythree' \
+docker run -it -e APPSETTING_TRANSLATE_KEY=keyone \ 
+-e APPSETTING_SPEECH_KEY=keytwo \
+-e APPSETTING_SENTIMENT_KEY=keythree \
 -p 5000:5000 \
 translatorapp
 ```
